@@ -1,44 +1,55 @@
-<!DOCTYPE HTML>
-<html xmlns='http://www.w3.org/1999/xhtml'>
-	<head>
-		<title>Random name generator</title>
-		<meta charset='utf-8' />
-		<style type='text/css'>
-			#name {
-				color : #444;
-				font : bold 51px times, Times New Roman, times-roman, georgia, serif;
-				letter-spacing : -2px;
-				line-height : 44px;
-				text-align : center;
-			}
-			#refresh {
-				font : normal 11px Gill Sans, Verdana;
-				letter-spacing : 2px;
-				line-height : 14px;
-				text-align : center;
-				text-transform : uppercase;
-			}
-			a { color : #666; }
-			a:hover { color : #999; }
-		</style>
-	</head>
-	<body>
-		<script type='text/javascript'>
-			consonnants = [
-				'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 
-				'n', 'p', 'r', 's', 't', 'th', 'v', 'x', 'z'];
-			vowels = ['a', 'au', 'e', 'i', 'o', 'ou', 'u', 'y'];
+<!DOCTYPE html>
+<html lang="en">
 
-			name = "";
-			length = Math.floor(Math.random() * 3) + 2; 
-			for (i = 0; i < length; i++)
-				name += (consonnants[Math.floor(Math.random()*consonnants.length)]
-						 + vowels[Math.floor(Math.random()*vowels.length)]);
-			name = name.charAt(0).toUpperCase() + name.slice(1);
-			document.write("<p id='name'>" + name + "</p>"); 
-		</script>
-		<p id="refresh">
-			<a href='#' onclick='window.location.reload()'>I don't like this one, generate a new one</a>
-		</p>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random name generator</title>
+  <style type='text/css'>
+    #name {
+      color: #444;
+      font: bold 51px times, Times New Roman, times-roman, georgia, serif;
+      letter-spacing: -2px;
+      line-height: 44px;
+      text-align: center;
+    }
+
+    #refresh {
+      font: normal 11px Gill Sans, Verdana;
+      letter-spacing: 2px;
+      line-height: 14px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: #666;
+    }
+
+    a:hover {
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+  <script type='text/javascript'>
+    consonnants = [
+      'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm',
+      'n', 'p', 'r', 's', 't', 'th', 'v', 'x', 'z'];
+    vowels = ['a', 'au', 'e', 'i', 'o', 'ou', 'u', 'y'];
+
+    name = "";
+    length = Math.floor(Math.random() * 3) + 2;
+    for (i = 0; i < length; i++)
+      name += (consonnants[Math.floor(Math.random() * consonnants.length)]
+        + vowels[Math.floor(Math.random() * vowels.length)]);
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+    document.write("<p id='name'>" + name + "</p>"); 
+  </script>
+  <p id="refresh">
+    <a href='#' onclick='window.location.reload()'>I don't like this one, generate a new one</a>
+  </p>
+</body>
+
 </html>
